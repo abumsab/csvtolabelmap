@@ -1,0 +1,22 @@
+
+csv = open("labels.csv", "r")
+pbtxt = open("labels.pbtxt", "a")
+str1 = """
+item {
+	id:"""
+str2="""
+	name:"""
+str3="""
+}"""
+
+
+i=0;
+
+for x in csv:
+  l = x.split(",");
+  string = str1+l[0]+str2+l[1]+str3;
+  pbtxt.write(string)
+
+# f.write("Now the file has more content!") replace("~",l[1]).
+csv.close()
+pbtxt.close()
